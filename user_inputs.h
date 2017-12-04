@@ -4,10 +4,11 @@ void *t1(void *ptr){
 	message = (char *)ptr;
 	printf("%s \n", message);
 	printf("thread done!\n");
-	
+
+	char c;
 	while(1){
-		delayMillis(500);
-		printf("%s \n", message);
+		c = getche();
+		printf("\nYou typed: %c\n", c);
 	}
 }
 
