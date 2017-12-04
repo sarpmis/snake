@@ -2,10 +2,6 @@ int foodX;
 int foodY;
 int foodZ;
 
-// initialize RNG
-time_t t;
-srand((unsigned) time(&t));
-
 // puts food at a random point on the grid that does not
 // contain snake
 void randomFood(){

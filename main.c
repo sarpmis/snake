@@ -21,6 +21,10 @@ void main(void) {
 	// start with a clean board
 	char board[64];
 	clearBoard(board);
+
+	// initialize RNG for foods
+	time_t t;
+	srand((unsigned) time(&t));
 	
 	int y = 0;
 	for(y; y < 8; y++){
