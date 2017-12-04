@@ -135,7 +135,8 @@ void makeMove(){
 	if(containsFood(head->x, head->y, head->z)){
 		ateFood = 1;
 		randomFood();
+	} else {
+		ateFood = 0;
 	}
-	ateFood = 0;
 	printSnake();
 }
