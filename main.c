@@ -45,11 +45,11 @@ void main(void) {
 	addSnake(board);
 	drawBoard(board);
 
-	delayMillis(1000);
-	insertHead();
-	clearBoard(board);
-	addSnake(board);
-	drawBoard(board);
+	// delayMillis(1000);
+	// insertHead();
+	// clearBoard(board);
+	// addSnake(board);
+	// drawBoard(board);
 
 }
 

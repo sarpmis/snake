@@ -35,9 +35,11 @@ void insertHead(){
 	temp->x = head->x;
 	temp->y = head->y;
 	temp->z = head->z;
+	printf("temp at : %d, %d, %d\n", temp->x, temp->y, temp->z);
 
 	switch(snakeDirection){
 		case POSX :
+			printf("here\n");
 			temp->x = temp->x + 1;
 		case NEGX :
 			temp->x = temp->x - 1;
@@ -51,11 +53,9 @@ void insertHead(){
 			temp->z = temp->z - 1;
 	}
 
-	printf("snake at : %d, %d, %d\n", temp->x, temp->y, temp->z);
 	temp->prev = head;
 	head = temp;
-	printf("head at : %d, %d, %d\n", head->x, head->y, head->z);
-	printf("head prev at : %d, %d, %d\n", head->prev->x, head->prev->y, head->prev->z);
+	printSnake();
 }
 
 // returns true if a given coordinate contains the snake
@@ -68,4 +68,14 @@ int containsSnake(int x, int y, int z){
 		temp = temp->prev;
 	}
 	return 0;
+}
+
+void printSnake(){
+	struct SnakeNode* temp = head;
+	printf("snake = ");
+	while(temp != NULL){
+		printf(" (%d, %d, %d)", temp->x, temp->y, temp->z);
+		temp = temp->prev;
+	}
+	printf("\n");
 }
