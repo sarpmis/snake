@@ -12,22 +12,29 @@ void *getUserInputs(void *ptr){
 
 		switch(c){
 			case 't' :
-				*snake_dir = POSX;
+				// can't do a 180 turn!
+				if(*snake_dir != NEGX)
+					*snake_dir = POSX;
 				break;
 			case 'y' :
-				*snake_dir = NEGX;
+				if(*snake_dir != POS)
+					*snake_dir = NEGX;
 				break;
 			case 'g' :
-				*snake_dir = POSY;
+				if(*snake_dir != NEGY)
+					*snake_dir = POSY;
 				break;
 			case 'h' :
-				*snake_dir = NEGY;
+				if(*snake_dir != POSY)
+					*snake_dir = NEGY;
 				break;
 			case 'i' :
-				*snake_dir = POSZ;
+				if(*snake_dir != NEGZ)
+					*snake_dir = POSZ;
 				break;
 			case 'k' :
-				*snake_dir = NEGZ;
+				if(*snake_dir != POSZ)
+					*snake_dir = NEGZ;
 				break;
 		}
 	}
