@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include "EasyPIO.h"
+#include "function_declarations.h"
 #include "board_operations.h"
 #include "food.h"
 #include "snake_list.h"
