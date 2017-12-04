@@ -41,13 +41,13 @@ void main(void) {
 	snakeDirection = POSX;
 
 	insertHead();
-	clearBoard();
+	clearBoard(board);
 	addSnake(board);
 	drawBoard(board);
 
 	delayMillis(1000);
 	insertHead();
-	clearBoard();
+	clearBoard(board);
 	addSnake(board);
 	drawBoard(board);
 
