@@ -27,7 +27,7 @@ void main(void) {
 		addToBoard(board, y, 0, 7);
 	}
 	drawBoard(board);
-	delayMillis(1000);	
+	delayMillis(1000);
 
 	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	head->z = 7;
@@ -54,7 +54,7 @@ void main(void) {
 		makeMove();
 		clearBoard(board);
 		addSnake(board);
-		addFood();
+		addFood(board);
 		drawBoard(board);
 	}
 
