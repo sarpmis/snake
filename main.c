@@ -51,5 +51,7 @@ void main(void) {
 	// addSnake(board);
 	// drawBoard(board);
 
+	printf("%d,%d,%d,%d,%d", POSX, NEGX, POSY, NEGY, POSZ);
+
 }
 
