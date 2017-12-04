@@ -6,7 +6,9 @@ int foodZ;
 time_t t;
 srand((unsigned) time(&t));
 
-void randomizeCoordinates(){
+// puts food at a random point on the grid that does not
+// contain snake
+void randomFood(){
 	foodX = rand() % 8;
 	foodY = rand() % 8;
 	foodZ = rand() % 8;
@@ -15,7 +17,7 @@ void randomizeCoordinates(){
 	}
 }
 
-void drawFood(char* board){
+void addFood(char* board){
 	addToBoard(board, foodX, foodY, foodZ);
 }
 

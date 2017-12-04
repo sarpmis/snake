@@ -1,8 +1,8 @@
-
-void *t1(void *ptr){
+// wait for user input from console to change snake direction
+void *getUserInputs(void *ptr){
 	int *snake_dir;
 	snake_dir = (int *)ptr;
-	printf("thread started!\n");
+	printf("input thread started!\n");
 
 	char c;
 	while(1){
@@ -30,7 +30,6 @@ void *t1(void *ptr){
 				*snake_dir = NEGZ;
 				break;
 		}
-		printf("new direction is %d\n", *snake_dir);
 	}
 }
 

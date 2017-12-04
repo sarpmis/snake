@@ -1,28 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <pthread.h>
 #include "EasyPIO.h"
 #include "board_operations.h"
 #include "snake_list.h"
 #include "getch.h"
-#include <pthread.h>
 #include "user_inputs.h"
-
-
-
 
 void main(void) {
 	// thread to handle user inputs
-	pthread_t thread1;
-	pthread_create(&thread1, NULL, t1, (void*) &snakeDirection);
+	pthread_t input_thread;
+	pthread_create(&input_thread, NULL, getUserInputs, (void*) &snakeDirection);
 	
-	// main thread runs the game
+	// Raspberry Pi setup for SPI
 	pioInit();
 	spiInit(244000, 0);
 
+	// start with a clean board
 	char board[64];
-
-	// testRow(board, 0);
-
+	clearBoard(board);
+	
 	int y = 0;
 	for(y; y < 8; y++){
 		addToBoard(board, y, 0, 7);
@@ -30,8 +27,6 @@ void main(void) {
 	drawBoard(board);
 	delayMillis(1000);	
 
-	clearBoard(board);
-	
 	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	head->z = 7;
 	head->y = 0;
@@ -45,18 +40,23 @@ void main(void) {
 	addSnake(board);
 	drawBoard(board);
 
-	snakeDirection = POSX;
+	// place food
+	randomFood();
 
-	while(1) {
+	// start the game
+	playing = 1;
+
+	// game loop
+	while(playing) {
 		delayMillis(1000);
-		insertHead();
-		removeTail();
+		makeMove();
 		clearBoard(board);
 		addSnake(board);
+		addFood();
 		drawBoard(board);
 	}
 
-	pthread_cancel(thread1);
-	printf("done\n");
+	// cancel the user input thread when game is over
+	pthread_cancel(input_thread);
+	printf("Haha you died!\n");
 }
-
