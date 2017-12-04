@@ -38,7 +38,10 @@ void makeMove(){
 }
 
 void removeTail(){
+	if(head == NULL) return;
+
 	struct SnakeNode* temp = head;
+
 	if(temp->prev == NULL) head = NULL;
 	else {
 		while(temp->prev->prev != NULL){
@@ -46,9 +49,12 @@ void removeTail(){
 		}
 		temp->prev = NULL;
 	}
+	printSnake();
 }
 
 void insertHead(){
+	if(head == NULL) return;
+
 	struct SnakeNode* temp = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	temp->x = head->x;
 	temp->y = head->y;

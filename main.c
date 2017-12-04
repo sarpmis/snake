@@ -3,6 +3,7 @@
 #include "EasyPIO.h"
 #include "board_operations.h"
 #include "snake_list.h"
+#include "getch.h"
 
 
 
@@ -56,8 +57,33 @@ void main(void) {
 	clearBoard(board);
 	addSnake(board);
 	drawBoard(board);
+
+	delayMillis(1000);
+	removeTail();
+	clearBoard(board);
+	addSnake(board);
+	drawBoard(board);
 	
+	delayMillis(1000);
+	removeTail();
+	clearBoard(board);
+	addSnake(board);
+	drawBoard(board);
+
+	delayMillis(1000);
+	removeTail();
+	clearBoard(board);
+	addSnake(board);
+	drawBoard(board);
+
 	printf("done\n");
 
+	char c;
+	printf("(getche example) please type a letter: ");
+	c = getche();
+	printf("\nYou typed: %c\n", c);
+	printf("(getch example) please type a letter...");
+	c = getch();
+	printf("\nYou typed: %c\n", c);
 }
 
