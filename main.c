@@ -3,10 +3,10 @@
 #include <pthread.h>
 #include "EasyPIO.h"
 #include "board_operations.h"
+#include "food.h"
 #include "snake_list.h"
 #include "getch.h"
 #include "user_inputs.h"
-#include "food.h"
 
 void main(void) {
 	// thread to handle user inputs
