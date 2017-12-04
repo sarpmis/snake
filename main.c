@@ -47,7 +47,10 @@ void main(void) {
 	drawBoard(board);
 
 	// place food
-	randomFood();
+	// randomFood();
+	foodX = 5;
+	foodY = 0;
+	foodZ = 6;
 
 	// start the game
 	playing = 1;
@@ -60,6 +63,7 @@ void main(void) {
 		addSnake(board);
 		addFood(board);
 		drawBoard(board);
+		printf("ateFood = %d\n", ateFood);
 	}
 
 	// cancel the user input thread when game is over
