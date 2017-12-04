@@ -13,6 +13,17 @@ struct SnakeNode *head = NULL;
 int snakeDirection = POSX;
 int ateFood = 0;
 
+// prints the snake on the console
+void printSnake(){
+	struct SnakeNode* temp = head;
+	printf("snake = ");
+	while(temp != NULL){
+		printf(" (%d, %d, %d)", temp->x, temp->y, temp->z);
+		temp = temp->prev;
+	}
+	printf("\n");
+}
+
 // adds snake to the board
 void addSnake(char* board){
 	struct SnakeNode* temp = head;
@@ -40,17 +51,17 @@ void insertHead(){
 	switch(snakeDirection){
 		case POSX :
 			printf("here\n");
-			temp->x = temp->x + 1;
+			temp->x = head->x + 1;
 		case NEGX :
-			temp->x = temp->x - 1;
+			temp->x = head->x - 1;
 		case POSY :
-			temp->y = temp->y + 1;
+			temp->y = head->y + 1;
 		case NEGY :
-			temp->y = temp->y - 1;
+			temp->y = head->y - 1;
 		case POSZ :
-			temp->z = temp->z + 1;
+			temp->z = head->z + 1;
 		case NEGZ :
-			temp->z = temp->z - 1;
+			temp->z = head->z - 1;
 	}
 
 	temp->prev = head;
@@ -68,14 +79,4 @@ int containsSnake(int x, int y, int z){
 		temp = temp->prev;
 	}
 	return 0;
-}
-
-void printSnake(){
-	struct SnakeNode* temp = head;
-	printf("snake = ");
-	while(temp != NULL){
-		printf(" (%d, %d, %d)", temp->x, temp->y, temp->z);
-		temp = temp->prev;
-	}
-	printf("\n");
 }
