@@ -17,7 +17,7 @@ void *getUserInputs(void *ptr){
 					*snake_dir = POSX;
 				break;
 			case 'y' :
-				if(*snake_dir != POS)
+				if(*snake_dir != POSX)
 					*snake_dir = NEGX;
 				break;
 			case 'g' :
