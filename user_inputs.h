@@ -5,9 +5,9 @@ void *t1(void *ptr){
 	printf("%s \n", message);
 	printf("thread done!\n");
 	
-	// while(1){
-	// 	delayMillis(500);
-	// 	printf("%s \n", message);
-	// }
+	while(1){
+		delayMillis(500);
+		printf("%s \n", message);
+	}
 }
 
