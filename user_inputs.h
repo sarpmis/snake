@@ -2,8 +2,7 @@
 void *t1(void *ptr){
 	int *snake_dir;
 	snake_dir = (int *)ptr;
-	printf("%s \n", message);
-	printf("thread done!\n");
+	printf("thread started!\n");
 
 	char c;
 	while(1){
@@ -13,25 +12,25 @@ void *t1(void *ptr){
 
 		switch(c){
 			case 't' :
-				snake_dir* = POSX;
+				*snake_dir = POSX;
 				break;
 			case 'y' :
-				snake_dir* = NEGX;
+				*snake_dir = NEGX;
 				break;
 			case 'g' :
-				snake_dir* = POSY;
+				*snake_dir = POSY;
 				break;
 			case 'h' :
-				snake_dir* = NEGY;
+				*snake_dir = NEGY;
 				break;
 			case 'i' :
-				snake_dir* = POSZ;
+				*snake_dir = POSZ;
 				break;
 			case 'k' :
-				snake_dir* = NEGZ;
+				*snake_dir = NEGZ;
 				break;
 		}
-		printf("new direction is %d\n", snake_dir*);
+		printf("new direction is %d\n", *snake_dir);
 	}
 }
 
