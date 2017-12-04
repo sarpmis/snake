@@ -9,7 +9,7 @@ void randomFood(){
 	foodY = rand() % 8;
 	foodZ = rand() % 8;
 	if(containsSnake(foodX, foodY, foodZ)){
-		randomizeCoordinates();
+		randomFood();
 	}
 }
 
