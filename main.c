@@ -5,6 +5,7 @@
 #include "snake_list.h"
 #include "getch.h"
 #include <pthread.h>
+#include "user_inputs.h"
 
 
 
