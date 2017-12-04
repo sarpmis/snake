@@ -48,6 +48,7 @@ void insertHead(){
 	temp->z = head->z;
 	printf("temp at : %d, %d, %d\n", temp->x, temp->y, temp->z);
 
+	printf("direction = %d", snakeDirection);
 	switch(snakeDirection){
 		case POSX :
 			printf("here\n");
