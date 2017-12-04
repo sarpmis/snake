@@ -51,8 +51,11 @@ void insertHead(){
 			temp->z = temp->z - 1;
 	}
 
+	printf("snake at : %d, %d, %d\n", temp->x, temp->y, temp->z);
 	temp->prev = head;
 	head = temp;
+	printf("head at : %d, %d, %d\n", head->x, head->y, head->z);
+	printf("head prev at : %d, %d, %d\n", head->prev->x, head->prev->y, head->prev->z);
 }
 
 // returns true if a given coordinate contains the snake
