@@ -14,7 +14,6 @@ void main(void) {
 	// thread to handle user inputs
 	pthread_t thread1;
 	pthread_create(&thread1, NULL, t1, (void*) &snakeDirection);
-	pthread_join(thread1, NULL);
 	
 	// main thread runs the game
 	pioInit();
@@ -56,6 +55,8 @@ void main(void) {
 		addSnake(board);
 		drawBoard(board);
 	}
+
+	pthread_cancel(thread1);
 	printf("done\n");
 }
 
