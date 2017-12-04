@@ -53,16 +53,22 @@ void insertHead(){
 		case POSX :
 			printf("here\n");
 			temp->x = head->x + 1;
+			break;
 		case NEGX :
 			temp->x = head->x - 1;
+			break;
 		case POSY :
 			temp->y = head->y + 1;
+			break;
 		case NEGY :
 			temp->y = head->y - 1;
+			break;
 		case POSZ :
 			temp->z = head->z + 1;
+			break;
 		case NEGZ :
 			temp->z = head->z - 1;
+			break;
 	}
 
 	temp->prev = head;
