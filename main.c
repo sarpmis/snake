@@ -45,13 +45,19 @@ void main(void) {
 	addSnake(board);
 	drawBoard(board);
 
-	// delayMillis(1000);
-	// insertHead();
-	// clearBoard(board);
-	// addSnake(board);
-	// drawBoard(board);
+	delayMillis(1000);
+	insertHead();
+	clearBoard(board);
+	addSnake(board);
+	drawBoard(board);
 
-	printf("%d,%d,%d,%d,%d", POSX, NEGX, POSY, NEGY, POSZ);
+	delayMillis(1000);
+	removeTail();
+	clearBoard(board);
+	addSnake(board);
+	drawBoard(board);
+	
+	printf("done\n");
 
 }
 

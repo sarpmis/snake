@@ -38,7 +38,14 @@ void makeMove(){
 }
 
 void removeTail(){
-	
+	struct SnakeNode* temp = head;
+	if(temp->prev == NULL) head = NULL;
+	else {
+		while(temp->prev->prev != NULL){
+			temp = temp->prev;
+		}
+		temp->prev = NULL;
+	}
 }
 
 void insertHead(){
@@ -46,12 +53,9 @@ void insertHead(){
 	temp->x = head->x;
 	temp->y = head->y;
 	temp->z = head->z;
-	printf("temp at : %d, %d, %d\n", temp->x, temp->y, temp->z);
 
-	printf("direction = %d", snakeDirection);
 	switch(snakeDirection){
 		case POSX :
-			printf("here\n");
 			temp->x = head->x + 1;
 			break;
 		case NEGX :
