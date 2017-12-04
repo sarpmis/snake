@@ -91,6 +91,8 @@ void main(void) {
 	pthread_t thread1;
 	char *message1 = "thread 1";
 
-	pthread_create( &thread1, NULL, t1, (void*) message1);
+	pthread_create(&thread1, NULL, t1, (void*) message1);
+	pthread_join(thread1, NULL);
+	printf("all done!\n");
 }
 
