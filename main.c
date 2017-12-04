@@ -55,6 +55,7 @@ void main(void) {
 	// start the game
 	playing = 1;
 
+	printf("snake body at (3,0,7) = %d\n", containsSnakeBody(3,0,7));
 	// game loop
 	while(playing) {
 		delayMillis(1000);
@@ -63,7 +64,6 @@ void main(void) {
 		addSnake(board);
 		addFood(board);
 		drawBoard(board);
-		printf("ateFood = %d\n", ateFood);
 	}
 
 	// cancel the user input thread when game is over

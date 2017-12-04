@@ -7,7 +7,7 @@ void *getUserInputs(void *ptr){
 	char c;
 	while(1){
 		c = getche();
-		printf("\nYou typed: %c\n", c);
+		// printf("\nYou typed: %c\n", c);
 		if(c == 'q') break;
 
 		switch(c){
