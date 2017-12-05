@@ -28,8 +28,12 @@ void main(void) {
 	
 	delayMillis(2000);
 	int y = 0;
-	for(y; y < 8; y++){
-		addToBoard(board, y, 0, 7);
+	for(z; z < 8; z++){
+		for(x; x < 8; x++){
+			for(y; y < 8; y++){
+				addToBoard(board, x, y, z);
+			}
+		}
 	}
 	drawBoard(board);
 	delayMillis(10000);
