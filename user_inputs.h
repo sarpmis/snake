@@ -1,4 +1,5 @@
 // wait for user input from console to change snake direction
+// pointer to the function to send it to new thread
 void *getUserInputs(void *ptr){
 	int *snake_dir;
 	snake_dir = (int *)ptr;
@@ -7,7 +8,6 @@ void *getUserInputs(void *ptr){
 	char c;
 	while(1){
 		c = getche();
-		// printf("\nYou typed: %c\n", c);
 		if(c == 'q') break;
 
 		switch(c){
@@ -35,6 +35,29 @@ void *getUserInputs(void *ptr){
 			case 'k' :
 				if(*snake_dir != POSZ)
 					*snake_dir = NEGZ;
+				break;
+		}
+	}
+}
+
+// user selects game speed 
+void speedSelect(int *gameSpeed){
+	int choosing = 1;
+	char ch;
+	printf("Select game speed: \n 's' for snail, 'd' for dragon \n");
+	while(choosing){
+		ch = getch();
+		switch(c){
+			case 's' :
+				*gameSpeed = 1000;
+				choosing = 0;
+				break;
+			case 'd' :
+				*gameSpeed = 500;
+				choosing = 0;
+				break;
+			default :
+				printf("That's not a valid selection!\n");
 				break;
 		}
 	}

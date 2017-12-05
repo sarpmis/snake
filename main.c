@@ -49,9 +49,13 @@ void main(void) {
 	// start the game
 	playing = 1;
 
+	// user selects the speed (the delay between moves)
+	int gameSpeed;
+	speedSelect(&gameSpeed);
+
 	// game loop
 	while(playing) {
-		delayMillis(1000);
+		delayMillis(gameSpeed);
 		makeMove();
 		clearBoard(board);
 		addSnake(board);
@@ -62,4 +66,7 @@ void main(void) {
 	// cancel the user input thread when game is over
 	pthread_cancel(input_thread);
 	printf("Haha you died!\n");
+	printf("Your score was = %d\n", snakeLength());
+
+	// TODO: Leaderboards
 }
