@@ -12,4 +12,12 @@ void main(void) {
 	// start with a clean board
 	char board[64];
 	clearBoard(board);
+
+	struct Cube cube;
+	initializeCube(&cube);
+
+	addCube(board, &cube);
+	drawBoard(board);
+
+	delayMillis(5000);
 }
