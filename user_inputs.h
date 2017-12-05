@@ -40,6 +40,10 @@ void *getUserInputs(void *ptr){
 	}
 }
 
+void eraseLastChar(){
+	printf("\b");
+}
+
 // user selects game speed or quits
 void speedSelect(int *gameSpeed){
 	int choosing = 1;
@@ -51,6 +55,7 @@ void speedSelect(int *gameSpeed){
 			case 's' :
 				*gameSpeed = 1000;
 				choosing = 0;
+				eraseLastChar();
 				printf("\n Snail it is! \n");
 				break;
 			case 'd' :
