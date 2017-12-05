@@ -2,7 +2,7 @@ struct Point{
 	int x;
 	int y;
 	int z;
-}
+};
 
 struct Cube{
 	struct Point* points;
