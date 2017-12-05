@@ -7,9 +7,7 @@
 
 
 void main(void) {
-	// Raspberry Pi setup for SPI
-	pioInit();
-	spiInit(244000, 0);
+	initializeSPI();
 
 	// start with a clean board
 	char board[64];

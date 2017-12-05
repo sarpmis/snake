@@ -12,10 +12,8 @@
 void main(void) {
 	initTermios(1);
 
-
-	// Raspberry Pi setup for SPI
-	pioInit();
-	spiInit(244000, 0);
+	// set up SPI connection between Pi and FPGA
+	initializeSPI();
 
 	// start with a clean board
 	char board[64];

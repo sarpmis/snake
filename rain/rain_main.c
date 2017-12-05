@@ -4,9 +4,7 @@
 #include "../board_operations.h"
 #include "rain.h"
 void main(void){
-	// Pi setup for SPI
-	pioInit();
-	spiInit(244000, 0);
+	initializeSPI();
 
 	// initialize board
 	char board[64];

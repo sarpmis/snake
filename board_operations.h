@@ -1,12 +1,13 @@
 #define LOAD_PIN 12
 
-// Send the board to the FPGA via SPI
-void drawBoard(char *board){
+void initializeSPI(){
 	pioInit();
 	spiInit(244000, 0);
+	pinMode(LOAD_PIN, OUTPUT);	
+}
 
-	pinMode(LOAD_PIN, OUTPUT);
-
+// Send the board to the FPGA via SPI
+void drawBoard(char *board){
 	digitalWrite(LOAD_PIN, 1);
 	int i = 0;
 	for(i; i < 64; i++){
