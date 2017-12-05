@@ -26,7 +26,7 @@ void main(void) {
 	time_t t;
 	srand((unsigned) time(&t));
 	
-	everythingOn();
+	everythingOn(board);
 	drawBoard(board);
 	delayMillis(2000);
 
