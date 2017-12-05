@@ -45,6 +45,6 @@ void randomDrop(){
 		drops[dropPos].dropY = dropPos % 8;
 		drops[dropPos].dropZ = 7;
 		drops[dropPos].on_board = 1;
-		printf("(%d, %d, %d)\n", drops[dropPos].dropX, drops[dropPos].dropY, drops[dropPos].dropZ);
+		// printf("(%d, %d, %d)\n", drops[dropPos].dropX, drops[dropPos].dropY, drops[dropPos].dropZ);
 	}
 }
