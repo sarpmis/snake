@@ -10,7 +10,7 @@
 #include "user_inputs.h"
 
 void main(void) {
-	initTermios(1); // no echo in terminal
+	initTermios(1);
 
 	// thread to handle user inputs
 	pthread_t input_thread;
@@ -68,6 +68,6 @@ void main(void) {
 	pthread_cancel(input_thread);
 	printf("\n Game over.\n");
 	printf("Your score was = %d\n", snakeLength());
-
+	initTermios(1);
 	// TODO: Leaderboards
 }
