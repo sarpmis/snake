@@ -25,24 +25,10 @@ void main(void) {
 	time_t t;
 	srand((unsigned) time(&t));
 	
+	// turn all lights on until user selects speed 
 	everythingOn(board);
 	drawBoard(board);
 	delayMillis(2000);
-
-	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
-	head->z = 7;
-	head->y = 3;
-	head->x = 1;
-
-	struct SnakeNode* temp = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
-	temp->z = 7;
-	temp->y = 3;
-	temp->x = 0;
-	head->prev = temp;
-	addSnake(board);
-	drawBoard(board);
-
-
 
 	// user selects the speed (the delay between moves)
 	int gameSpeed;
@@ -51,7 +37,12 @@ void main(void) {
 	// thread to handle user inputs during game
 	pthread_t input_thread;
 	pthread_create(&input_thread, NULL, getUserInputs, (void*) &snakeDirection);
+
+	// clear the board
+	clearBoard(board);
+	drawBoard(board);
 	
+	// snake initialize animation
 	initializeSnake(board, &gameSpeed, 4);
 
 	// place food
