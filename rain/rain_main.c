@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/../EasyPIO.h"
-#include "/../board_operations.h"
+#include "../EasyPIO.h"
+#include "../board_operations.h"
 #include "rain.h"
 void main(void){
 	// Pi setup for SPI
