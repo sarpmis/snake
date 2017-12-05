@@ -16,7 +16,7 @@ void main(void) {
 	struct Cube cube;
 	initializeCube(&cube);
 
-	int k = 5;
+	int k = 10;
 	while(k > 0){
 		clearBoard(board);
 		addCube(board, &cube);
