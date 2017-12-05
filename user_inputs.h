@@ -60,12 +60,12 @@ void speedSelect(int *gameSpeed){
 				printf("Snail it is! \n");
 				break;
 			case 'd' :
-				*gameSpeed = 500;
+				*gameSpeed = 350;
 				choosing = 0;
 				printf("Dragon it is!\n");
 				break;
 			case 'i' :
-				*gameSpeed = 250;
+				*gameSpeed = 120;
 				choosing = 0;
 				printf("Insane!!!\n");
 				break;
