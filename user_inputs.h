@@ -51,10 +51,12 @@ void speedSelect(int *gameSpeed){
 			case 's' :
 				*gameSpeed = 1000;
 				choosing = 0;
+				printf("Snail it is! \n");
 				break;
 			case 'd' :
 				*gameSpeed = 500;
 				choosing = 0;
+				printf("Dragon it is! \n")
 				break;
 			default :
 				printf("That's not a valid selection!\n");
