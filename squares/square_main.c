@@ -16,14 +16,12 @@ void main(void) {
 	struct Cube cube;
 	initializeCube(&cube);
 
-	int k = 10;
-	while(k > 0){
+	while(1){
 		clearBoard(board);
 		addCube(board, &cube);
 		drawBoard(board);
 		expandCube(&cube);
 		if(cubeOutOfBounds(&cube)) initializeCube(&cube);
-		delayMillis(1000);
-		k--;
+		delayMillis(100);
 	}
 }
