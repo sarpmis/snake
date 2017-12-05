@@ -13,6 +13,14 @@ void rainSetup(){
 	srand((unsigned) time(&t));
 	
 	drops = malloc(64*sizeof(struct RainDrop));
+
+	int i = 0;
+	for(i = 0; i < 64; i++){
+		drops[i].dropX = 0;
+		drops[i].dropY = 0;
+		drops[i].dropZ = 0;
+		drops[i].on_board = 0;
+	}
 }
 
 void addDrops(char* board){
@@ -27,7 +35,6 @@ void addDrops(char* board){
 void moveDrops(){
 	int i;
 	for(i = 0; i < 64; i++){
-		drops[i];
 		if (drops[i].on_board == 1){
 			if(drops[i].dropZ == 0) {
 				drops[i].on_board = 0;
@@ -47,4 +54,8 @@ void randomDrop(){
 		drops[dropPos].on_board = 1;
 		// printf("(%d, %d, %d)\n", drops[dropPos].dropX, drops[dropPos].dropY, drops[dropPos].dropZ);
 	}
+}
+
+void freeDrops(){
+	free(drops);
 }
