@@ -26,6 +26,7 @@ void main(void) {
 	time_t t;
 	srand((unsigned) time(&t));
 	
+	delayMillis(2000);
 	int y = 0;
 	for(y; y < 8; y++){
 		addToBoard(board, y, 0, 7);
