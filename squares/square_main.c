@@ -18,6 +18,7 @@ void main(void) {
 
 	int k = 5;
 	while(k > 0){
+		clearBoard(board);
 		addCube(board, &cube);
 		drawBoard(board);
 		expandCube(&cube);
