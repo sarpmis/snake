@@ -49,7 +49,7 @@ void eraseLastChar(){
 void speedSelect(int *gameSpeed){
 	int choosing = 1;
 	char ch;
-	printf("Select game speed: \n's' for snail, 'd' for dragon, 'i' for insane!!!\n");
+	printf("Select game speed: \n's' for snail, 'd' for dragon, 'i' for insane\n");
 	while(choosing){
 		ch = getch();
 		switch(ch){
