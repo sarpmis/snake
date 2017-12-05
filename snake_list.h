@@ -159,3 +159,14 @@ void initializeSnake(char* board, int* gameSpeed, int size){
 	addSnake(board);
 	drawBoard(board);
 }
+
+void freeSnake(){
+	struct SnakeNode* temp = head;
+	struct SnakeNode* temp2;
+
+	while(temp != NULL){
+		temp2 = temp->prev;
+		free(temp);
+		temp = temp2;
+	}
+}

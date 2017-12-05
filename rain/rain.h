@@ -11,7 +11,7 @@ struct RainDrop{
 	int dropZ;
 };
 
-struct RainDrop drops[];
+struct RainDrop* drops = malloc(64*sizeof(RainDrop));
 
 void addDrops(char* board){
 	int i;

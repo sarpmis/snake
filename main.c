@@ -65,6 +65,7 @@ void main(void) {
 	printf("Game over.\n");
 	printf("Your score was = %d\n", snakeLength());
 
-	initTermios(1);
+	// free the memory to avoid memory leaks
+	freeSnake();
 	// TODO: Leaderboards
 }
