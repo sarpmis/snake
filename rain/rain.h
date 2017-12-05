@@ -17,7 +17,7 @@ void rainSetup(){
 void addDrops(char* board){
 	int i;
 	for(i = 0; i < 64; i++){
-		struct RainDrop* temp = drops[i];
+		struct RainDrop* temp = &drops[i];
 		if (temp != NULL){
 			addToBoard(board, temp->dropX, temp->dropY, temp->dropZ);
 		}
@@ -27,7 +27,7 @@ void addDrops(char* board){
 void moveDrops(){
 	int i;
 	for(i = 0; i < 64; i++){
-		struct RainDrop* temp = drops[i];
+		struct RainDrop* temp = &drops[i];
 		if (temp != NULL){
 			if(temp->dropZ == 0) {
 				drops[i] == NULL;
