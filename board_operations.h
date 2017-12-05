@@ -25,7 +25,6 @@ void clearBoard(char* board){
 
 void addToBoard(char* board, int x, int y, int z){
 	board[z*8 + y] |= (0x01 << x);
-	printf("(%d,%d,%d)", x, y, z);
 }
 
 // returns true if the given coordinates are not in the grid

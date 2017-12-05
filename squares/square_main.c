@@ -17,6 +17,8 @@ void main(void) {
 	initializeCube(&cube);
 
 	addCube(board, &cube);
+
+	addToBoard(board,0,0,0);
 	drawBoard(board);
 
 	delayMillis(5000);
