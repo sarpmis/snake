@@ -137,3 +137,7 @@ void addCube(char* board, struct Cube* cube){
 		}
 	}
 }
+
+int cubeOutOfBounds(struct Cube* cube){
+	return(cube->points[0].x > 7);
+}
