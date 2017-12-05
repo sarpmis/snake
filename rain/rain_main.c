@@ -14,7 +14,9 @@ void main(void){
 
 	rainSetup();
 
-	while(1){
+
+	int i = 5;
+	while(i > 0){
 		moveDrops();
 		int i;
 		for (i = 0; i < 5; i++){
@@ -23,5 +25,6 @@ void main(void){
 		addDrops(board);
 		drawBoard(board);
 		delayMillis(500);
+		i--;
 	}
 }

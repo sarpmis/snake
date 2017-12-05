@@ -67,5 +67,4 @@ void main(void) {
 
 	// free the memory to avoid memory leaks
 	freeSnake();
-	// TODO: Leaderboards
 }
