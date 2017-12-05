@@ -17,12 +17,12 @@ void main(void){
 	int i;
 	while(1){
 		moveDrops();
-		for (i = 0; i < 3; i++){
+		for (i = 0; i < 1; i++){
 			randomDrop();
 		}
 		clearBoard(board);
 		addDrops(board);
 		drawBoard(board);
-		delayMillis(50);
+		delayMillis(20);
 	}
 }
