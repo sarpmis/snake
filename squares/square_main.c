@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include "..\EasyPIO.h"
-#include "..\board_operations.h"
+#include "../EasyPIO.h"
+#include "../board_operations.h"
 
 
 
