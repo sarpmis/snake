@@ -15,6 +15,7 @@ void main(void){
 	rainSetup();
 
 
+	printf("starting loop\n");
 	int i = 5;
 	while(i > 0){
 		moveDrops();
