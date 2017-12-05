@@ -22,6 +22,6 @@ void main(void) {
 		drawBoard(board);
 		expandCube(&cube);
 		if(cubeOutOfBounds(&cube)) initializeCube(&cube);
-		delayMillis(100);
+		delayMillis(10);
 	}
 }
