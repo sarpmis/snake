@@ -138,5 +138,5 @@ void makeMove(){
 	} else {
 		ateFood = 0;
 	}
-	printSnake();
+	// printSnake();
 }

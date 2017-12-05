@@ -26,47 +26,28 @@ void main(void) {
 	time_t t;
 	srand((unsigned) time(&t));
 	
-	delayMillis(2000);
-	int y = 0;
-	int x = 0;
-	int z = 0;
-	int count = 0;
-	for(z = 0; z < 8; z++){
-		for(x = 0; x < 8; x++){
-			for(y = 0; y < 8; y++){
-				count++;
-				printf("adding (%d,%d,%d)\n", x, y, z);
-				addToBoard(board, x, y, z);
-				printf("count = %d\n", count);
-			}
-		}
-	}
+	everythingOn();
 	drawBoard(board);
-	delayMillis(10000);
+	delayMillis(2000);
 
 	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	head->z = 7;
-	head->y = 0;
-	head->x = 4;
+	head->y = 3;
+	head->x = 1;
 
 	struct SnakeNode* temp = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	temp->z = 7;
-	temp->y = 0;
-	temp->x = 3;
+	temp->y = 3;
+	temp->x = 0;
 	head->prev = temp;
 	addSnake(board);
 	drawBoard(board);
 
 	// place food
-	// randomFood();
-	foodX = 5;
-	foodY = 0;
-	foodZ = 6;
+	randomFood();
 
 	// start the game
 	playing = 1;
-
-	printf("snake body at (3,0,7) = %d\n", containsSnakeBody(3,0,7));
 
 	// game loop
 	while(playing) {
