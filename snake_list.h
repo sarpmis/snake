@@ -152,10 +152,10 @@ void initializeSnake(char* board, int* gameSpeed, int size){
 	for(i = 0; i < size-1; i++){
 		addSnake(board);
 		drawBoard(board);
-		delayMillis(gameSpeed);
+		delayMillis(*gameSpeed);
 		insertHead();
 	}
-	addSnake();
+	addSnake(board);
 	drawBoard(board);
 
 }
