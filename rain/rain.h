@@ -11,7 +11,7 @@ struct RainDrop{
 	int dropZ;
 }
 
-struct RainDrop drops[64];
+struct RainDrop* drops[64];
 
 void addDrops(char* board){
 	int i;
