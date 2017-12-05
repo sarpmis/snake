@@ -42,8 +42,7 @@ void main(void) {
 	addSnake(board);
 	drawBoard(board);
 
-	// place food
-	randomFood();
+
 
 	// user selects the speed (the delay between moves)
 	int gameSpeed;
@@ -53,6 +52,10 @@ void main(void) {
 	pthread_t input_thread;
 	pthread_create(&input_thread, NULL, getUserInputs, (void*) &snakeDirection);
 	
+	initializeSnake();
+
+	// place food
+	randomFood(board, &gameSpeed, 4);
 
 	// start the game
 	playing = 1;
@@ -68,7 +71,7 @@ void main(void) {
 
 	// cancel the user input thread when game is over
 	pthread_cancel(input_thread);
-	printf("\n Game over.\n");
+	printf("Game over.\n");
 	printf("Your score was = %d\n", snakeLength());
 
 	initTermios(1);

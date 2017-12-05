@@ -3,7 +3,7 @@
 void *getUserInputs(void *ptr){
 	int *snake_dir;
 	snake_dir = (int *)ptr;
-	printf("input thread started!\n");
+	// printf("input thread started!\n");
 
 	char c;
 	while(1){
@@ -49,7 +49,7 @@ void eraseLastChar(){
 void speedSelect(int *gameSpeed){
 	int choosing = 1;
 	char ch;
-	printf("Select game speed: \n 's' for snail, 'd' for dragon \n");
+	printf("Select game speed: \n's' for snail, 'd' for dragon, 'i' for insane!!!\n");
 	while(choosing){
 		ch = getch();
 		switch(ch){
@@ -57,12 +57,17 @@ void speedSelect(int *gameSpeed){
 				*gameSpeed = 1000;
 				choosing = 0;
 				eraseLastChar();
-				printf("\n Snail it is! \n");
+				printf("Snail it is! \n");
 				break;
 			case 'd' :
 				*gameSpeed = 500;
 				choosing = 0;
-				printf("\n Dragon it is! \n");
+				printf("Dragon it is!\n");
+				break;
+			case 'i' :
+				*gameSpeed = 250;
+				choosing = 0;
+				printf("Insane!!!\n");
 				break;
 			default :
 				printf("That's not a valid selection!\n");

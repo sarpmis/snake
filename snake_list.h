@@ -140,3 +140,22 @@ void makeMove(){
 	}
 	// printSnake();
 }
+
+void initializeSnake(char* board, int* gameSpeed, int size){
+	snakeDirection = POSX;
+	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
+	head->z = 4;
+	head->y = 3;
+	head->x = 0;
+
+	int i;
+	for(i = 0; i < size-1; i++){
+		addSnake(board);
+		drawBoard(board);
+		delayMillis(gameSpeed);
+		insertHead();
+	}
+	addSnake();
+	drawBoard(board);
+
+}
