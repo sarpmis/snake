@@ -42,6 +42,7 @@ void *getUserInputs(void *ptr){
 
 void eraseLastChar(){
 	printf("\b");
+	printf(" ");
 }
 
 // user selects game speed or quits
