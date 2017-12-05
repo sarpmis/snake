@@ -21,5 +21,10 @@ void main(void) {
 	addToBoard(board,0,0,0);
 	drawBoard(board);
 
-	delayMillis(5000);
+	delayMillis(2000);
+
+	expandCube(&cube);
+	addCube(board, &cube);
+
+	drawBoard(board);
 }

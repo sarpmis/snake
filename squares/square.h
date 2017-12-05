@@ -44,39 +44,39 @@ void initializeCube(struct Cube* cube){
 	cube->points[7].z = 3;
 }
 
-// void expandCube(struct Cube* cube){
-// 	cube->points[0].x = 4;
-// 	cube->points[0].y = 4;
-// 	cube->points[0].z = 4;
+void expandCube(struct Cube* cube){
+	cube->points[0].x = cube->points[0].x + 1;
+	cube->points[0].y = cube->points[0].y + 1;
+	cube->points[0].z = cube->points[0].z + 1;
 
-// 	cube->points[1].x = 3;
-// 	cube->points[1].y = 4;
-// 	cube->points[1].z = 4;
+	cube->points[1].x = cube->points[1].x - 1;
+	cube->points[1].y = cube->points[1].y + 1;
+	cube->points[1].z = cube->points[1].z + 1;
 
-// 	cube->points[2].x = 4;
-// 	cube->points[2].y = 3;
-// 	cube->points[2].z = 4;
+	cube->points[2].x = cube->points[2].x + 1;
+	cube->points[2].y = cube->points[2].y - 1;
+	cube->points[2].z = cube->points[2].z + 1;
 
-// 	cube->points[3].x = 3;
-// 	cube->points[3].y = 3;
-// 	cube->points[3].z = 4;
+	cube->points[3].x = cube->points[3].x - 1;
+	cube->points[3].y = cube->points[3].y - 1;
+	cube->points[3].z = cube->points[3].z + 1;
 
-// 	cube->points[4].x = 4;
-// 	cube->points[4].y = 4;
-// 	cube->points[4].z = 3;
+	cube->points[4].x = cube->points[4].x + 1;
+	cube->points[4].y = cube->points[4].y + 1;
+	cube->points[4].z = cube->points[4].z - 1;
 
-// 	cube->points[5].x = 3;
-// 	cube->points[5].y = 4;
-// 	cube->points[5].z = 3;
+	cube->points[5].x = cube->points[5].x - 1;
+	cube->points[5].y = cube->points[5].y + 1;
+	cube->points[5].z = cube->points[5].z - 1;
 
-// 	cube->points[6].x = 4;
-// 	cube->points[6].y = 3;
-// 	cube->points[6].z = 3;
+	cube->points[6].x = cube->points[6].x + 1;
+	cube->points[6].y = cube->points[6].y - 1;
+	cube->points[6].z = cube->points[6].z - 1;
 
-// 	cube->points[7].x = 3;
-// 	cube->points[7].y = 3;
-// 	cube->points[7].z = 3;
-// }
+	cube->points[7].x = cube->points[7].x - 1;
+	cube->points[7].y = cube->points[7].y - 1;
+	cube->points[7].z = cube->points[7].z - 1;
+}
 
 void addCube(char* board, struct Cube* cube){
 	// connect adjacent vertices with lines
