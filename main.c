@@ -46,13 +46,12 @@ void main(void) {
 	// place food
 	randomFood();
 
-	// start the game
-	playing = 1;
-
 	// user selects the speed (the delay between moves)
 	int gameSpeed;
 	speedSelect(&gameSpeed);
 
+	// start the game
+	playing = 1;
 	// game loop
 	while(playing) {
 		delayMillis(gameSpeed);
@@ -65,7 +64,7 @@ void main(void) {
 
 	// cancel the user input thread when game is over
 	pthread_cancel(input_thread);
-	printf("Haha you died!\n");
+	printf("\n Game over.\n");
 	printf("Your score was = %d\n", snakeLength());
 
 	// TODO: Leaderboards
