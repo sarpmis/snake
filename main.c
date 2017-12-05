@@ -28,6 +28,8 @@ void main(void) {
 	
 	delayMillis(2000);
 	int y = 0;
+	int x = 0;
+	int z = 0;
 	for(z; z < 8; z++){
 		for(x; x < 8; x++){
 			for(y; y < 8; y++){
