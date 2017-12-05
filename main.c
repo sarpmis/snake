@@ -10,6 +10,8 @@
 #include "user_inputs.h"
 
 void main(void) {
+	initTermios(0); // no echo in terminal
+
 	// thread to handle user inputs
 	pthread_t input_thread;
 	pthread_create(&input_thread, NULL, getUserInputs, (void*) &snakeDirection);

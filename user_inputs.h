@@ -7,7 +7,7 @@ void *getUserInputs(void *ptr){
 
 	char c;
 	while(1){
-		c = getche();
+		c = getch();
 		if(c == 'q') break;
 
 		switch(c){
