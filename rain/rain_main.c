@@ -16,17 +16,16 @@ void main(void){
 
 
 	printf("starting loop\n");
-	int k = 5;
 	int i;
-	while(k > 0){
+	while(1){
 		moveDrops();
 		printf("got here\n");
 		for (i = 0; i < 5; i++){
 			randomDrop();
 		}
+		clearBoard(board);
 		addDrops(board);
 		drawBoard(board);
-		delayMillis(500);
-		k--;
+		delayMillis(300);
 	}
 }
