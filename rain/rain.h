@@ -14,13 +14,13 @@ void rainSetup(){
 	
 	drops = malloc(64*sizeof(struct RainDrop));
 
-	int i = 0;
-	for(i = 0; i < 64; i++){
-		drops[i].dropX = 0;
-		drops[i].dropY = 0;
-		drops[i].dropZ = 0;
-		drops[i].on_board = 0;
-	}
+	// int i = 0;
+	// for(i = 0; i < 64; i++){
+	// 	drops[i].dropX = 0;
+	// 	drops[i].dropY = 0;
+	// 	drops[i].dropZ = 0;
+	// 	drops[i].on_board = 0;
+	// }
 }
 
 void addDrops(char* board){
