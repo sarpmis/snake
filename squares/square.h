@@ -85,7 +85,7 @@ void addCube(char* board, struct Cube* cube){
 	int i;
 	int j;
 	for(i = 0; i < 8; i++){
-		for(j = 0; j < 7-i; j++){
+		for(j = 0; j < 8; j++){
 			if(cube->points[i].x == cube->points[j].x 
 				&& cube->points[i].y == cube->points[j].y){
 				int maxZ;
