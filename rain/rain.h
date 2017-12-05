@@ -1,17 +1,18 @@
-void rainSetup(){
-
-	// initialize rng
-	time_t t;
-	srand((unsigned) time(&t));
-}
-
 struct RainDrop{
 	int dropX;
 	int dropY;
 	int dropZ;
 };
 
-struct RainDrop* drops = malloc(64*sizeof(struct RainDrop));
+struct RainDrop* drops;
+
+void rainSetup(){
+	// initialize rng
+	time_t t;
+	srand((unsigned) time(&t));
+	
+	drops = malloc(64*sizeof(struct RainDrop));
+}
 
 void addDrops(char* board){
 	int i;
