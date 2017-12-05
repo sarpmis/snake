@@ -30,11 +30,14 @@ void main(void) {
 	int y = 0;
 	int x = 0;
 	int z = 0;
+	int count = 0;
 	for(z; z < 8; z++){
 		for(x; x < 8; x++){
 			for(y; y < 8; y++){
+				count++;
 				printf("adding (%d,%d,%d)\n", x, y, z);
 				addToBoard(board, x, y, z);
+				printf("count = %d\n", count);
 			}
 		}
 	}
