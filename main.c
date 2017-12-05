@@ -31,7 +31,7 @@ void main(void) {
 		addToBoard(board, y, 0, 7);
 	}
 	drawBoard(board);
-	delayMillis(1000);
+	delayMillis(10000);
 
 	head = (struct SnakeNode*)malloc(sizeof(struct SnakeNode));
 	head->z = 7;
@@ -56,6 +56,7 @@ void main(void) {
 	playing = 1;
 
 	printf("snake body at (3,0,7) = %d\n", containsSnakeBody(3,0,7));
+
 	// game loop
 	while(playing) {
 		delayMillis(1000);
