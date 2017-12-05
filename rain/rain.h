@@ -40,7 +40,7 @@ void moveDrops(){
 
 void randomDrop(){
 	int dropPos = rand() % 64;
-	if(drops[dropPos].on_board) {
+	if(drops[dropPos].on_board == 0) {
 		drops[dropPos].dropX = dropPos / 8;
 		drops[dropPos].dropY = dropPos % 8;
 		drops[dropPos].dropZ = 7;
