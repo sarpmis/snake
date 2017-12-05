@@ -117,6 +117,7 @@ void removeTail(){
 		while(temp->prev->prev != NULL){
 			temp = temp->prev;
 		}
+		free(temp->prev);
 		temp->prev = NULL;
 	}
 }
@@ -157,5 +158,4 @@ void initializeSnake(char* board, int* gameSpeed, int size){
 	}
 	addSnake(board);
 	drawBoard(board);
-
 }

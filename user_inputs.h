@@ -11,20 +11,20 @@ void *getUserInputs(void *ptr){
 		if(c == 'q') break;
 
 		switch(c){
-			case 't' :
+			case 'a' :
 				// can't do a 180 turn!
 				if(*snake_dir != NEGX)
 					*snake_dir = POSX;
 				break;
-			case 'y' :
+			case 'd' :
 				if(*snake_dir != POSX)
 					*snake_dir = NEGX;
 				break;
-			case 'g' :
+			case 's' :
 				if(*snake_dir != NEGY)
 					*snake_dir = POSY;
 				break;
-			case 'h' :
+			case 'w' :
 				if(*snake_dir != POSY)
 					*snake_dir = NEGY;
 				break;
