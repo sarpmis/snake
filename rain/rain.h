@@ -30,7 +30,7 @@ void moveDrops(){
 		drops[i];
 		if (drops[i].on_board == 1){
 			if(drops[i].dropZ == 0) {
-				drops[i].on_board == 0;
+				drops[i].on_board = 0;
 			} else{
 				drops[i].dropZ = drops[i].dropZ - 1;
 			}

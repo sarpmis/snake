@@ -14,12 +14,9 @@ void main(void){
 
 	rainSetup();
 
-
-	printf("starting loop\n");
 	int i;
 	while(1){
 		moveDrops();
-		printf("got here\n");
 		for (i = 0; i < 5; i++){
 			randomDrop();
 		}
