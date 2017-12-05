@@ -31,9 +31,9 @@ void main(void) {
 	int x = 0;
 	int z = 0;
 	int count = 0;
-	for(z; z < 8; z++){
-		for(x; x < 8; x++){
-			for(y; y < 8; y++){
+	for(z = 0; z < 8; z++){
+		for(x = 0; x < 8; x++){
+			for(y = 0; y < 8; y++){
 				count++;
 				printf("adding (%d,%d,%d)\n", x, y, z);
 				addToBoard(board, x, y, z);
