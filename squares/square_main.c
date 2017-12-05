@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include "../EasyPIO.h"
 #include "../board_operations.h"
-
+#include "square.h"
 
 
 void main(void) {
@@ -13,10 +13,10 @@ void main(void) {
 	char board[64];
 	clearBoard(board);
 
-	struct Cube* cube = malloc(sizeof(struct Cube));
-	initializeCube(cube);
+	struct Cube cube;
+	initializeCube(&cube);
 
-	addCube(board, cube);
+	addCube(board, &cube);
 	drawBoard(board);
 
 	delayMillis(5000);
