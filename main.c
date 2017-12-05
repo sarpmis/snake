@@ -52,10 +52,10 @@ void main(void) {
 	pthread_t input_thread;
 	pthread_create(&input_thread, NULL, getUserInputs, (void*) &snakeDirection);
 	
-	initializeSnake();
+	initializeSnake(board, &gameSpeed, 4);
 
 	// place food
-	randomFood(board, &gameSpeed, 4);
+	randomFood();
 
 	// start the game
 	playing = 1;
