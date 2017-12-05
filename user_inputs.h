@@ -43,10 +43,10 @@ void *getUserInputs(void *ptr){
 // user selects game speed 
 void speedSelect(int *gameSpeed){
 	int choosing = 1;
-	char ch;
+	char c;
 	printf("Select game speed: \n 's' for snail, 'd' for dragon \n");
 	while(choosing){
-		ch = getch();
+		c = getch();
 		switch(c){
 			case 's' :
 				*gameSpeed = 1000;
