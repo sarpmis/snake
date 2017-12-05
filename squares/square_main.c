@@ -13,10 +13,10 @@ void main(void) {
 	char board[64];
 	clearBoard(board);
 
-	struct Cube cube;
-	initializeCube(&cube);
+	struct Cube* cube = malloc(sizeof(struct Cube));
+	initializeCube(cube);
 
-	addCube(board, &cube);
+	addCube(board, cube);
 	drawBoard(board);
 
 	delayMillis(5000);
