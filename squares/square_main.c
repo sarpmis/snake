@@ -22,7 +22,7 @@ void main(void) {
 		addCube(board, &cube);
 		drawBoard(board);
 		expandCube(&cube);
-		if(cubeOutOfBounds(&cube)) initializeCube;
+		if(cubeOutOfBounds(&cube)) initializeCube(&cube);
 		delayMillis(1000);
 		k--;
 	}
