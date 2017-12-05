@@ -33,6 +33,7 @@ void main(void) {
 	for(z; z < 8; z++){
 		for(x; x < 8; x++){
 			for(y; y < 8; y++){
+				printf("adding (%d,%d,%d)\n", x, y, z);
 				addToBoard(board, x, y, z);
 			}
 		}
