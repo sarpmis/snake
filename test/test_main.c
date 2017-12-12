@@ -19,12 +19,12 @@ void main(void) {
 	clearBoard(board);
 
 	struct Point point;
-	initializeCube(&point);
+	initPoint(&point);
 	
 	while(1){
 		clearBoard(board);
 		addLine(board,&point);
-		moveLine(&point);
+		movePoint(&point);
 		drawBoard(board);
 		delayMillis(100);
 	}
