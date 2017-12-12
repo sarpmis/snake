@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////
+// user_inputs.h
+// File containing methods to get input from user
+// via Linux terminal
+///////////////////////////////////////////////////////////
+
 // wait for user input from console to change snake direction
 // pointer to the function to send it to new thread
 void *getUserInputs(void *ptr){
@@ -40,11 +46,6 @@ void *getUserInputs(void *ptr){
 	}
 }
 
-void eraseLastChar(){
-	printf("\b");
-	printf(" ");
-}
-
 // user selects game speed or quits
 void speedSelect(int *gameSpeed){
 	int choosing = 1;
@@ -56,7 +57,6 @@ void speedSelect(int *gameSpeed){
 			case 's' :
 				*gameSpeed = 1000;
 				choosing = 0;
-				eraseLastChar();
 				printf("Snail it is! \n");
 				break;
 			case 'd' :

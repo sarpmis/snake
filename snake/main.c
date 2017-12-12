@@ -1,12 +1,19 @@
+///////////////////////////////////////////////////////////
+// main.c
+// Main method for snake game. 
+// Author: Sarp Misoglu
+// 12/5/2017
+///////////////////////////////////////////////////////////
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include "EasyPIO.h"
+#include "../EasyPIO.h"
+#include "../board_operations.h"
+#include "../getch.h"
 #include "function_declarations.h"
-#include "board_operations.h"
 #include "food.h"
 #include "snake_list.h"
-#include "getch.h"
 #include "user_inputs.h"
 
 void main(void) {
