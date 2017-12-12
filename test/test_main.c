@@ -13,17 +13,17 @@
 
 void main(void) {
 	initializeSPI();
-
 	// start with a clean board
 	char board[64];
 	clearBoard(board);
 
-	struct Point point;
-	initPoint(&point);
+	char text = "GOOD";
+	struct Word word;
+	initWord(text, word);
 	
 	while(1){
 		clearBoard(board);
-		addLine(board,&point);
+		addWord(board,&point);
 		movePoint(&point);
 		drawBoard(board);
 		delayMillis(100);
