@@ -13,11 +13,7 @@ struct Line{
 	struct Point* points;
 };
 
-
-
-
-
-void addLine(char* board, struct Line* line){
+void addLine(char* board){
 	// connect adjacent vertices with lines
 	// if two points have two attributes the same,
 	// they are adjacent

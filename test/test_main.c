@@ -20,7 +20,7 @@ void main(void) {
 
 	//while(1){
 		clearBoard(board);
-		addLine(board, &cube);
+		addLine(board);
 		drawBoard(board);
 		//delayMillis(80);
 	//}
