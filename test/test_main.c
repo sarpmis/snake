@@ -18,9 +18,6 @@ void main(void) {
 	char board[64];
 	clearBoard(board);
 
-	struct Cube cube;
-	initializeCube(&cube);
-
 	//while(1){
 		clearBoard(board);
 		addLine(board, &cube);

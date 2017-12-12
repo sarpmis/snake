@@ -27,10 +27,4 @@ void addLine(char* board, struct Line* line){
 	for (i = 0; i < 8; i++) {
 		addToBoard(board,i,4,4);
 	}
-	
-				
-}
-
-int cubeOutOfBounds(struct Cube* cube){
-	return(cube->points[0].x > 7);
 }
