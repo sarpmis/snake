@@ -18,10 +18,14 @@ void main(void) {
 	char board[64];
 	clearBoard(board);
 
-	//while(1){
+	struct Point point;
+	initializeCube(&point);
+	
+	while(1){
 		clearBoard(board);
-		addLine(board);
+		addLine(board,&point);
+		moveLine(&point);
 		drawBoard(board);
-		//delayMillis(80);
-	//}
+		delayMillis(100);
+	}
 }
