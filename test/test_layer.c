@@ -16,7 +16,7 @@ void main(void) {
 			for(x = 0; x < 8; x++){
 				int y;
 				for(y = 0; y < 8; y++){
-					addToBoard(board, x, y, z);
+					addToBoard(board, x, y, 7);
 				}
 			}
 			printf("layer %d \n", z);
