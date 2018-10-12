@@ -9,18 +9,20 @@ void main(void) {
 	char board[64];
 	clearBoard(board);
 
-	int z = 0;
-	for(z; z < 8; z++) {
-		int x;
-		for(x; x < 8; x++){
-			int y;
-			for(y; y < 8; y++){
-				addToBoard(board, x, y, z);
+	while(1) {
+		int z = 0;
+		for(z; z < 8; z++) {
+			int x;
+			for(x; x < 8; x++){
+				int y;
+				for(y; y < 8; y++){
+					addToBoard(board, x, y, z);
+				}
 			}
+			printf("layer %d \n", z);
+			drawBoard(board);
+			delayMillis(1000);
+			clearBoard(board);
 		}
-		printf("layer %d", z);
-		drawBoard(board);
-		delayMillis(1000);
-		clearBoard(board);
 	}
 }
