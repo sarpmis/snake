@@ -10,16 +10,16 @@ void main(void) {
 	clearBoard(board);
 
 	while(1) {
-		int z;
-		for(z = 0; z < 8; z++) {
-			int x;
-			for(x = 0; x < 8; x++){
+		int x;
+		for(x = 0; x < 8; x++) {
+			int z;
+			for(z = 0; z < 8; z++){
 				int y;
 				for(y = 0; y < 8; y++){
 					addToBoard(board, x, y, z);
 				}
 			}
-			printf("layer %d \n", z);
+			printf("row %d \n", x);
 			drawBoard(board);
 			delayMillis(1000);
 			clearBoard(board);
