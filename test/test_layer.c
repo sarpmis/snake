@@ -10,13 +10,13 @@ void main(void) {
 	clearBoard(board);
 
 	while(1) {
-		int z = 0;
-		for(z; z < 8; z++) {
+		int z;
+		for(z = 0; z < 8; z++) {
 			int x;
-			for(x; x < 8; x++){
+			for(x = 0; x < 8; x++){
 				int y;
-				for(y; y < 8; y++){
-					addToBoard(board, x, y, z);
+				for(y = 0; y < 8; y++){
+					addToBoard(board, x, y, 8);
 				}
 			}
 			printf("layer %d \n", z);
